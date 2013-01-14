@@ -1,0 +1,1 @@
+details,summary{display:block}details.closed>*{display:none}details.closed>summary{display:block}details.open>summary{display:block}details.closed>summary:before{display:inline-block;content:"\25b6";padding:0 .1em;margin-right:.4em;font-size:.9em}details.open>summary:before{display:inline-block;content:"\25bc";padding:0;margin-right:.35em}
