@@ -24,8 +24,8 @@ Tested mostly successfully in Internet Explorer 8 with html5shiv.
 Known Issues
 ============
 
-FireFox changes <details open> to <details open="">  
-Safari supports <details> natively, but treats `open=""` as `open="open"`
+FireFox changes &lt;details open> to &lt;details open="">  
+Safari supports &lt;details> natively, but treats `open=""` as `open="open"`
 
 
 License
