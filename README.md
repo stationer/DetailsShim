@@ -15,7 +15,7 @@ Support
 
 Tested successfully in FireFox Win/Mac/Lin.  
 Non-interfering in Chrome Win/Mac/Lin, which supports details/summary.  
-Non-interfering in Safari Mac, which supports details/summary.  
+Non-interfering in Safari Win/Mac, which supports details/summary.  
 Tested successfully in Internet Explorer 9.  
 Tested mostly successfully in Internet Explorer 8 with html5shiv.  
  (IE doesn't like the unicode css :before content)  
@@ -32,4 +32,4 @@ License
 =======
 
 Released under MIT license, see included LICENSE.txt
-
+or http://opensource.org/licenses/MIT
