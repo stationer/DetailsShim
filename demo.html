@@ -13,8 +13,8 @@
 
 
 		<section id="body">
-			<p>The four tests check the four ways of specifying a &lt;details&gt; tag is open or closed.  
-				Support for 2 and 3 vary, even within browsers which natively support &lt;details&gt;.  
+			<p>The first four tests check the four ways of specifying a &lt;details&gt; tag is open or closed.
+				Support for 2 and 3 vary, even within browsers which natively support &lt;details&gt;.
 				The important thing is that tests 1 and 4 pass.
 			</p>
 			<ol>
@@ -45,6 +45,7 @@
 					</ul>
 				</li>
 			</ol>
+			<p>The fifth test demonstrates how details_shim() interacts with existing onclick handlers.</p>
 			<hr>
 			<details open="open"><summary>Test 1: should be open ...</summary> AND IT IS!</details>
 			<hr>
@@ -53,6 +54,10 @@
 			<details open><summary>Test 3: should be open ...</summary> AND IT IS!</details>
 			<hr>
 			<details><summary>Test 4: should be closed ...</summary> BUT IT ISN'T!</details>
+			<hr>
+			<details onclick="alert('Details Clicked.');">
+				<summary onclick="alert('Summary Clicked.');">Test 5: should alert on click ...</summary>
+				BUT DID IT?</details>
 			<hr>
 		</section>
 		<footer>

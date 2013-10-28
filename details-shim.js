@@ -43,7 +43,7 @@ function details_shim() {
 		Details.className += ' ' + state;
 
 		//Add onclick handler to toggle visibility class
-		Summaries[i].onclick = function () {
+		Summaries[i].addEventListener('click', function () {
 			//current state
 			var state = this.parentNode.getAttribute('data-open');
 			//new state
@@ -52,7 +52,7 @@ function details_shim() {
 			//replace previous open/close class
 			this.parentNode.className = this.parentNode.className
 				.replace(/\bopen\b|\bclosed\b/g, ' ') + ' ' + state;
-		};
+		});
 
 		//wrap text nodes in span to expose them to css
 		for (var j = 0; j < Details.childNodes.length; j++) {
