@@ -29,6 +29,11 @@ function details_shim() {
 
         var Details = Summaries[i].parentNode;
 
+        // Prevent repeat processing
+        if (Details.hasAttribute('data-open')) {
+            continue;
+        }
+
         //Set initial class according to `open` attribute
         var state = Details.outerHTML
             // OR older firefox doesn't have .outerHTML
