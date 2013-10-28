@@ -1,66 +1,64 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset='utf-8'>
-		<title>Demo for details-shim.js</title>
-		<script type="text/javascript" src="details-shim.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="details-shim.css" title="">
-	</head>
-	<body>
-		<header>
-			<h1>Demo for details-shim.js</h1>
-		</header>
-
-
-		<section id="body">
-			<p>The first four tests check the four ways of specifying a &lt;details&gt; tag is open or closed.
-				Support for 2 and 3 vary, even within browsers which natively support &lt;details&gt;.
-				The important thing is that tests 1 and 4 pass.
-			</p>
-			<ol>
-				<li>&lt;details open="open"&gt;
-					<ul>
-						<li>Tested to work in FF &amp; IE9</li>
-						<li>Tested to work in IE8 with <a href="https://github.com/aFarkas/html5shiv">html5shiv</a></li>
-						<li>Natively Supported by Chrome and Safari Mac</li>
-						<li style="font-weight:bold;color:green">Do use this for open &lt;details&gt;</li>
-					</ul>
-				</li>
-				<li>&lt;details open=""&gt;
-					<ul>
-						<li>Supportive Chrome and Safari treat this like &lt;details open="open"&gt;</li>
-						<li style="font-weight:bold;color:red">Don't use this</li>
-					</ul>
-				</li>
-				<li>&lt;details open&gt;
-					<ul>
-						<li>Unsupportive FireFox and Internet Explorer change this to &lt;details open=""&gt;</li>
-						<li style="font-weight:bold;color:red">Don't use this</li>
-					</ul>
-				</li>
-				<li>&lt;details&gt;
-					<ul>
-						<li>No specification defaults to <b>closed</b></li>
-						<li style="font-weight:bold;color:green">Do use this for closed &lt;details&gt;</li>
-					</ul>
-				</li>
-			</ol>
-			<p>The fifth test demonstrates how details_shim() interacts with existing onclick handlers.</p>
-			<hr>
-			<details open="open"><summary>Test 1: should be open ...</summary> AND IT IS!</details>
-			<hr>
-			<details open=""><summary>Test 2: should be closed ...</summary> BUT IT ISN'T!</details>
-			<hr>
-			<details open><summary>Test 3: should be open ...</summary> AND IT IS!</details>
-			<hr>
-			<details><summary>Test 4: should be closed ...</summary> BUT IT ISN'T!</details>
-			<hr>
-			<details onclick="alert('Details Clicked.');">
-				<summary onclick="alert('Summary Clicked.');">Test 5: should alert on click ...</summary>
-				BUT DID IT?</details>
-			<hr>
-		</section>
-		<footer>
-		</footer>
-	</body>
+    <head>
+        <meta charset='utf-8'>
+        <title>Demo for details-shim.js</title>
+        <script type="text/javascript" src="details-shim.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="details-shim.css" title="">
+    </head>
+    <body>
+        <header>
+            <h1>Demo for details-shim.js</h1>
+        </header>
+        <section id="body">
+            <p>The four tests check the four ways of specifying a &lt;details&gt; tag is open or closed.
+                Support for 2 and 3 vary, even within browsers which natively support &lt;details&gt;.
+                The important thing is that tests 1 and 4 pass.
+            </p>
+            <ol>
+                <li>&lt;details open="open"&gt;
+                    <ul>
+                        <li>Tested to work in FF &amp; IE9</li>
+                        <li>Tested to work in IE8 with <a href="https://github.com/aFarkas/html5shiv">html5shiv</a></li>
+                        <li>Natively Supported by Chrome and Safari Mac</li>
+                        <li style="font-weight:bold;color:green">Do use this for open &lt;details&gt;</li>
+                    </ul>
+                </li>
+                <li>&lt;details open=""&gt;
+                    <ul>
+                        <li>Supportive Chrome and Safari treat this like &lt;details open="open"&gt;</li>
+                        <li style="font-weight:bold;color:red">Don't use this</li>
+                    </ul>
+                </li>
+                <li>&lt;details open&gt;
+                    <ul>
+                        <li>Unsupportive FireFox and Internet Explorer change this to &lt;details open=""&gt;</li>
+                        <li style="font-weight:bold;color:red">Don't use this</li>
+                    </ul>
+                </li>
+                <li>&lt;details&gt;
+                    <ul>
+                        <li>No specification defaults to <b>closed</b></li>
+                        <li style="font-weight:bold;color:green">Do use this for closed &lt;details&gt;</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>The fifth test demonstrates how details_shim() interacts with existing onclick handlers.</p>
+            <hr>
+            <details open="open"><summary>Test 1: should be open ...</summary> AND IT IS!</details>
+            <hr>
+            <details open=""><summary>Test 2: should be closed ...</summary> BUT IT ISN'T!</details>
+            <hr>
+            <details open><summary>Test 3: should be open ...</summary> AND IT IS!</details>
+            <hr>
+            <details><summary>Test 4: should be closed ...</summary> BUT IT ISN'T!</details>
+            <hr>
+            <details onclick="alert('Details Clicked.');">
+                <summary onclick="alert('Summary Clicked.');">Test 5: should alert on click ...</summary>
+                BUT DID IT?</details>
+            <hr>
+        </section>
+        <footer>
+        </footer>
+    </body>
 </html>
