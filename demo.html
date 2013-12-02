@@ -3,8 +3,25 @@
     <head>
         <meta charset='utf-8'>
         <title>Demo for details-shim.js</title>
-        <script type="text/javascript" src="details-shim.min.js"></script>
+        <script type="text/javascript" src="details-shim.js"></script>
+        <!-- Redundant include tests safety of re-running script -->
+        <script type="text/javascript" src="details-shim.js"></script>
         <link rel="stylesheet" type="text/css" href="details-shim.css" title="">
+        <script type="text/javascript">
+            // functions to test setting state via javascript
+            function closeAll() {
+                var i, a = document.getElementsByTagName('details');
+                for (i in a) {
+                    a[i].open = '';
+                }
+            }
+            function openAll() {
+                var i, a = document.getElementsByTagName('details');
+                for (i in a) {
+                    a[i].open = 'open';
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -44,6 +61,11 @@
                 </li>
             </ol>
             <p>The fifth test demonstrates how details_shim() interacts with existing onclick handlers.</p>
+            <p>Additionally, These buttons test altering the open state via JavaScript
+                <button onclick="closeAll();">Close All</button>
+                <button onclick="openAll();">Open All</button>
+            </p>
+
             <hr>
             <details open="open"><summary>Test 1: should be open ...</summary> AND IT IS!</details>
             <hr>
