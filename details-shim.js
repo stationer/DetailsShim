@@ -17,6 +17,11 @@
  * @returns {boolean} false on error
  */
 function details_shim(Details) {
+    // For backward compatibility, if no DOM Element is sent, call init()
+    if (!Details || !('nodeType' in Details) || !('tagName' in Details)) {
+        return details_shim.init();
+    }
+
     var Summary;
     // If we were passed a details tag, find its summary tag
     if ('details' == Details.tagName.toLowerCase()) {
