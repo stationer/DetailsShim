@@ -42,6 +42,11 @@ function details_shim(Details) {
 
     // If the details tag is natively supported or already shimmed
     if ('boolean' == typeof Details.open) {
+        // If native, remove custom classes
+        if (!Details.getAttribute('data-open')) {
+            Details.className = Details.className
+                .replace(/\bdetails_shim_open\b|\bdetails_shim_closed\b/g, ' ');
+        }
         return false;
     }
 
@@ -56,7 +61,7 @@ function details_shim(Details) {
         : 'closed'
     ;
     Details.setAttribute('data-open', state);
-    Details.className += ' ' + state;
+    Details.className += ' details_shim_' + state;
 
     // Add onclick handler to toggle visibility class
     Summary.addEventListener('click', function() {
@@ -109,7 +114,8 @@ details_shim.toggle = function(Details, state) {
     Details.setAttribute('data-open', state);
     // replace previous open/close class
     Details.className = Details.className
-        .replace(/\bopen\b|\bclosed\b/g, ' ') + ' ' + state;
+        .replace(/\bdetails_shim_open\b|\bdetails_shim_closed\b/g, ' ')
+        + ' details_shim_' + state;
 }
 
 /**
