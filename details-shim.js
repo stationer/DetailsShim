@@ -64,9 +64,10 @@ function details_shim(Details) {
     Details.className += ' details_shim_' + state;
 
     // Add onclick handler to toggle visibility class
-    Summary.addEventListener('click', function() {
-        details_shim.toggle(Details);
-    });
+    Summary.addEventListener
+        ? Summary.addEventListener('click', function() { details_shim.toggle(Details); })
+        : Summary.attachEvent && Summary.attachEvent('onclick', function() { details_shim.toggle(Details); })
+    ;
 
     Object.defineProperty(Details, 'open', {
         get: function() {
