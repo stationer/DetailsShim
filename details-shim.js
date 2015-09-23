@@ -34,7 +34,6 @@ function details_shim(Details) {
     ) {
         Summary = Details;
         Details = Summary.parentNode;
-
     } else {
         // An invalid parameter was passed for Details
         return false;
@@ -117,7 +116,7 @@ details_shim.toggle = function(Details, state) {
     Details.className = Details.className
         .replace(/\bdetails_shim_open\b|\bdetails_shim_closed\b/g, ' ')
         + ' details_shim_' + state;
-}
+};
 
 /**
  * Run details_shim() on each details tag
@@ -129,7 +128,7 @@ details_shim.init = function() {
     for (var i = 0; i < Summaries.length; i++) {
         details_shim(Summaries[i]);
     }
-}
+};
 
 // Run details_shim.init() when the page loads
 window.addEventListener
