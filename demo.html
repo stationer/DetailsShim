@@ -3,10 +3,10 @@
     <head>
         <meta charset='utf-8'>
         <title>Demo for details-shim.js</title>
-        <script type="text/javascript" src="details-shim.js"></script>
+        <script type="text/javascript" src="details-shim.min.js"></script>
         <!-- Redundant include tests safety of re-running script -->
-        <script type="text/javascript" src="details-shim.js"></script>
-        <link rel="stylesheet" type="text/css" href="details-shim.css" title="">
+        <script type="text/javascript" src="details-shim.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="details-shim.min.css" title="">
         <script type="text/javascript">
             // functions to test setting state via javascript
             function closeAll() {
@@ -61,6 +61,7 @@
                 </li>
             </ol>
             <p>The fifth test demonstrates how details_shim() interacts with existing onclick handlers.</p>
+            <p>The sixth test demonstrates how details_shim()'s styles interact when nested within other list items.</p>
             <p>Additionally, These buttons test altering the open state via JavaScript
                 <button onclick="closeAll();">Close All</button>
                 <button onclick="openAll();">Open All</button>
@@ -78,6 +79,16 @@
             <details onclick="alert('Details Clicked.');">
                 <summary onclick="alert('Summary Clicked.');">Test 5: should alert on click ...</summary>
                 BUT DID IT?</details>
+            <hr>
+            <ol>
+                <li>Actual List Item
+                    <details>
+                        <summary>Summary Element which may be styled <code>display:list-item;</code></summary>
+                        Some Detail content
+                    </details>
+                </li>
+                <li>A Second List Item</li>
+            </ol>
             <hr>
         </section>
         <footer>
