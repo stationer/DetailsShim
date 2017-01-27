@@ -19,6 +19,7 @@ Non-interfering in Safari Win/Mac, which supports details/summary.
 Tested successfully in Internet Explorer 9.  
 Tested mostly successfully in Internet Explorer 8 with html5shiv.  
  (IE doesn't like the unicode css :before content)  
+Tested unsuccessfully in IE7-, considered unsupported
 
 
 Known Issues
