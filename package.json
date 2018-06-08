@@ -1,0 +1,26 @@
+{
+  "name": "details-shim",
+  "version": "1.1.0",
+  "description": "A pure JavaScript solution to make Details/Summary tags work in unsupportive browsers",
+  "main": "src/details-shim.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyleruebele/details-shim.git"
+  },
+  "keywords": [
+    "details",
+    "shim"
+  ],
+  "author": "Tyler Uebele",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tyleruebele/details-shim/issues"
+  },
+  "homepage": "https://github.com/tyleruebele/details-shim#readme",
+  "dependencies": {
+    "npm": "^6.1.0"
+  }
+}
